@@ -1,0 +1,6 @@
+  editor._eventRegistry['change'].splice(2, 1);
+  editor.commands._eventRegistry['exec'].splice(2, 1);
+  editor.on('change', function (e) {
+   $('#txtCode').val(editor.getSession().getValue());
+  });
+$(document).off('cut copy paste blur');
