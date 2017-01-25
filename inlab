@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+	long p;
+	long int n;
+	scanf("%ld%ld",&n,&p);
+	int a[p];
+	i=0;
+	while(n > 0)
+	{
+		a[i++]=n%10;
+		n/=10;
+	}
+	if(a[i-p]%2==0)
+	printf("Even");
+	else
+	printf("Odd");
+}
