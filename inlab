@@ -5,7 +5,7 @@ int main()
 	long int n;
 	scanf("%ld%ld",&n,&p);
 	int a[p];
-	i=0;
+	int i=0;
 	while(n > 0)
 	{
 		a[i++]=n%10;
@@ -16,3 +16,4 @@ int main()
 	else
 	printf("Odd");
 }
+
