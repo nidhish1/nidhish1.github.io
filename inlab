@@ -21,7 +21,7 @@ int main()
 
 
 --------------------------------------------
-#include< stdio.h >
+#include <stdio.h>
 void add(int r1,int i1,int r2,int i2)
 {
 	if(i1+i2 > 0)
@@ -39,7 +39,7 @@ void multi(int r1,int i1,int r2,int i2)
         else
 	printf("%d%di",(r1*r2)-(i1*i2),d);
 }
-void main()
+int main()
 {
 	int r1,r2,i1,i2;
 	scanf("%d%d%d%d",&r1,&i1,&r2,&i2);
