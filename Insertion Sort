@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int arr[5]={1,2,3,8,9};
+    int i,j,a,b,temp;
+    for (i=1;i<5;i++)
+    {
+      for (j=i;j>=0;j--)
+      {
+        a=arr[i];
+        b=arr[i-1];
+        if (a>=b)
+        {break;}
+        else
+        {
+          temp=0;
+          temp=a;
+          a=b;
+          b=temp;
+        }
+
+      }
+    }
+    for (i=0;i<5;i++)
+    {
+      printf("%d",arr[i]);
+    }
+}
