@@ -112,8 +112,6 @@ string by concatenation. The process of making an operator to exhibit different 
 in different instances is known as operator overloading.
 
 
-Dynamic Binding 
-
 
 
 
