@@ -87,7 +87,33 @@ The attributes are some time called data members because they hold information. 
 functions that operate on these data are sometimes called methods or member function. 
 
 
- Inheritance 
+Inheritance 
+
+Inheritance is the process by which objects of one class acquired the properties of objects
+of another classes.
+
+It supports the concept of hierarchical classification. For example,
+the bird, ‘robin’ is a part of class ‘flying bird’ which is again a part of the class ‘bird’.
+The principal behind this sort of division is that each derived class shares common
+characteristics with the class from which it is derived
+
+In OOP, the concept of inheritance provides the idea of reusability. This means that we
+can add additional features to an existing class without modifying it.
+
+
+Polymorphism
+
+Polymorphism is another important OOP concept. Polymorphism, a Greek term, means
+the ability to take more than on form. An operation may exhibit different behavior is
+different instances. The behavior depends upon the types of data used in the operation.
+For example, consider the operation of addition. For two numbers, the operation will
+generate a sum. If the operands are strings, then the operation would produce a third
+string by concatenation. The process of making an operator to exhibit different behaviors
+in different instances is known as operator overloading.
+
+
+Dynamic Binding 
+
 
 
 
