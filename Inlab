@@ -15,11 +15,14 @@ int fact(int n)
 int main()
 {
 	int n;
-	char ch;
+
 	cin>>n;
-	for(int i=0;i < n;i++)
-	cin>>ch;
-	cin>>ch;
+
+	string ch;
+	for (int i=0;i<n;i++)
+	{
+	    cin>> ch;
+	}
 	cout<<fact(n-1);
 	return(0);
 }
