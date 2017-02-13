@@ -1,18 +1,23 @@
-#include< iostream >
+#include<iostream>
 using namespace std;
 int fact(int n)
 {
-	int f=1;
-	for(int i=n;i > 1;i--)
-	f*=i;
-	return(f);
+	     if (n==1 || n==0)
+        {
+          return 1;
+        }
+        else
+        {
+          return n*fact(n-1);
+        }
+
 }
 int main()
 {
 	int n;
 	char ch;
 	cin>>n;
-	for(int i=0;i < n;i++)  
+	for(int i=0;i < n;i++)
 	cin>>ch;
 	cin>>ch;
 	cout<<fact(n-1);
