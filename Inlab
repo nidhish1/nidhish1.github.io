@@ -1,28 +1,19 @@
-#include<iostream>
-using namespace std;
-int fact(int n)
+void apr :: get()
 {
-	     if (n==1 || n==0)
-        {
-          return 1;
-        }
-        else
-        {
-          return n*fact(n-1);
-        }
-
+	cin>>first>>diff;
 }
-int main()
+int apr :: compute_term(unsigned int n)
 {
-	int n;
-
-	cin>>n;
-
-	string ch;
-	for (int i=0;i<n;i++)
-	{
-	    cin>> ch;
-	}
-	cout<<fact(n-1);
-	return(0);
+	return(first+(n-1)*diff);
+}
+int apr :: find_r(int k)
+{
+	if((k-first)%diff==0)
+        return(((k-first)/diff)+1);
+        else
+        return(0);
+}
+int apr :: abs_diff(unsigned int p,unsigned int q)
+{
+	return(abs((p-q)*diff));
 }
