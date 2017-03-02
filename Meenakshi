@@ -5,6 +5,7 @@ using namespace std;
 int main()
 {
     int arr[16];
+    int k;
 
     for (int i=0;i<=16;i++)
     {
@@ -18,23 +19,27 @@ int main()
     {
         raindata.push(arr[i]);
     }
-    int c=2000;
-    raindata.pop();
-    while (!raindata.empty())
+
+
+    for (int i=0;i<15;i++)
     {
-        cout<<"For the year"<<c<<"The next highest is--";
-        cout<<raindata.top()<<endl;
+        k=raindata.top();
         raindata.pop();
-        c=c+1;
+        if (raindata.top()>=k)
+        {
+            cout<<"for "<<2000+i<<" Next year "<<2000+i+1<<"has high rainfall"<<endl;
+        }
+
     }
-    cout<<"For the year"<<2015<<"The next highest is--";
-    cout<<arr[16]<<endl;
-    cout<<"For the year"<<2016<<"The next highest is--";
-    cout<<"Data not available";
+
+
+
 
 return 0;
 
 }
+
+
 --------------------------------------------------------------------------------------------------------------------------------------
 /*   Use inputs like {()}{[]}{},()(){} ie using parenthesis only
      
