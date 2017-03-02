@@ -191,7 +191,7 @@ int main()
         s=s+t;
         c=c+1;
         average=(s/c);
-        cout<<"Average time"<<average<<endl;
+        cout<<"Average time"<<average <<endl;
 
          if (runtime.size()==n)
     {
