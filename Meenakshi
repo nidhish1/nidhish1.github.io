@@ -35,3 +35,80 @@ int main()
 return 0;
 
 }
+--------------------------------------------------------------------------------------------------------------------------------------
+#include <iostream>
+#include <stack>
+#include <cstdio>
+#include <string>
+using namespace std;
+
+int main()
+{
+    char S1[30];
+    string S2;
+    stack <char> stk;
+    cout<<"Enter the expression";
+    cin>>S1;
+    
+
+    for (int i=0;i<30;i++)
+    {
+        if (S1[i]=='{' || S1[i]=='('|| S1[i]=='[')
+            {
+                stk.push(S1[i]);
+                S2=S2+S1[i];
+            }
+        else
+        {
+            if (S1[i]=='}' && stk.top()=='{')
+            {
+                stk.pop();
+                int k = S2.length();
+                for (int i=0;i<k;i++)
+                {
+                    cout<<"The length of subexp are"<<(i+1)*2<<endl;
+                    
+                }
+                S2.clear();
+            }
+            else if (S1[i]=='}' && stk.top()!='{')
+            {
+                cout<<"Unbalanced Expression"<<endl;
+                break;
+            }
+
+            if (S1[i]==')' && stk.top()=='(')
+            {
+                stk.pop();
+                int k = S2.length();
+                for (int i=0;i<k;i++)
+                {
+                    cout<<"The length of subexp are"<<(i+1)*2<<endl;
+                }
+                S2.clear();
+            }
+            else if (S1[i]==')' && stk.top()!='(')
+            {
+                cout<<"Unbalanced Expression"<<endl;
+                break;
+            }
+
+            if (S1[i]==']' && stk.top()=='[')
+            {
+                stk.pop();
+                int k = S2.length();
+                for (int i=0;i<k;i++)
+                {
+                    cout<<"The length of subexp are"<<(i+1)*2<<endl;
+                }
+                S2.clear();
+            }
+            else if (S1[i]==']' && stk.top()!='[')
+            {
+                cout<<"Unbalanced Expression"<<endl;
+                break;
+            }
+        }
+    }
+    return 0;
+}
