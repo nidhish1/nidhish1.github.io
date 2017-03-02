@@ -161,7 +161,7 @@ int main()
     
     ----------------------------------------------------------------------------------------------------------------------------
     
-    /*Don't give large numbers for process times.
+        /*Don't give large numbers for process times.
  like if you give 30, then you would have to wait for 30 seconds to
  complete the task. Use small numbers like 3,5,7 etc;*/
 
@@ -195,11 +195,13 @@ int main()
 
          if (runtime.size()==n)
     {
-        cout<<"Do you have more processes?Y/N";
+        cout<<"Do you have more processes?Y/N ";
         char i;cin>>i;
         if (i=='Y' || i=='y')
         {
             k=runtime.front();
+            s=s-k;
+            c=c-1;
             runtime.pop();
             for (int i=0;i<k;i++)
             {
@@ -221,6 +223,6 @@ int main()
        return 0;
 }
 
-}
+
 --------------------------------------------------------------------------------------------------------------------------------
 
