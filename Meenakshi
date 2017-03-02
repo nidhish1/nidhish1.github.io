@@ -49,7 +49,7 @@ int main()
     stack <char> stk;
     cout<<"Enter the expression";
     cin>>S1;
-    
+
 
     for (int i=0;i<30;i++)
     {
@@ -66,8 +66,19 @@ int main()
                 int k = S2.length();
                 for (int i=0;i<k;i++)
                 {
-                    cout<<"The length of subexp are"<<(i+1)*2<<endl;
-                    
+                    if ((char)(S2[i])=='{')
+                        {
+                            cout<<"the length of subexpression {} "<<(k-i)*2<<endl;
+                        }
+                    else if ((char)(S2[i])=='(')
+                        {
+                            cout<<"the length of subexpression () "<<(k-i)*2<<endl;
+                        }
+                    else if ((char)(S2[i])=='[')
+                        {
+                            cout<<"the length of subexpression [] "<<(k-i)*2<<endl;
+                        }
+
                 }
                 S2.clear();
             }
@@ -83,7 +94,19 @@ int main()
                 int k = S2.length();
                 for (int i=0;i<k;i++)
                 {
-                    cout<<"The length of subexp are"<<(i+1)*2<<endl;
+                    if ((char)(S2[i])=='{')
+                        {
+                            cout<<"the length of subexpression {} "<<(k-i)*2<<endl;
+                        }
+                    else if ((char)(S2[i])=='(')
+                        {
+                            cout<<"the length of subexpression () "<<(k-i)*2<<endl;
+                        }
+                    else if ((char)(S2[i])=='[')
+                        {
+                            cout<<"the length of subexpression [] "<<(k-i)*2<<endl;
+                        }
+
                 }
                 S2.clear();
             }
@@ -99,7 +122,19 @@ int main()
                 int k = S2.length();
                 for (int i=0;i<k;i++)
                 {
-                    cout<<"The length of subexp are"<<(i+1)*2<<endl;
+                    if ((char)(S2[i])=='{')
+                        {
+                            cout<<"the length of subexpression {} "<<(k-i)*2<<endl;
+                        }
+                    else if ((char)(S2[i])=='(')
+                        {
+                            cout<<"the length of subexpression () "<<(k-i)*2<<endl;
+                        }
+                    else if ((char)(S2[i])=='[')
+                        {
+                            cout<<"the length of subexpression [] "<<(k-i)*2<<endl;
+                        }
+
                 }
                 S2.clear();
             }
@@ -110,5 +145,7 @@ int main()
             }
         }
     }
+
+        cout<<S2;
     return 0;
 }
