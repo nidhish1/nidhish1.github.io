@@ -207,7 +207,7 @@ int main()
             {
                timer.sec++;
                Sleep(1000);
-               cout<<"Completing front process in"<<k-timer.sec<<" secs"<<endl;
+               cout<<"Completing front process in"<<k-timer.sec+1<<" secs"<<endl;
 
 
             }
