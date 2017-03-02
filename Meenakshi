@@ -145,7 +145,5 @@ int main()
             }
         }
     }
-
-        cout<<S2;
     return 0;
 }
