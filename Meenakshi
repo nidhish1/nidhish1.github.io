@@ -152,3 +152,61 @@ int main()
     }
     return 0;
 }
+-------------------------------------------------------------------------------------------------------------------------------
+
+#include<iostream>
+#include<Windows.h>
+#include <queue>
+using namespace std;
+
+struct time {
+int sec;
+};
+
+
+int main()
+{
+   time timer;
+   timer.sec=0;
+   int n,k;double t,c,s, average;
+   cout<<"Enter the queue size ";cin>>n;
+   queue <int> runtime;
+    c=0;
+    s=0;
+    while (runtime.size()<n)
+    {
+        cout<<"Enter the processor job time -";cin>>t;
+        runtime.push(t);
+        s=s+t;
+        c=c+1;
+        average=(s/c);
+        cout<<"Average time"<<average<<endl;
+
+         if (runtime.size()==n)
+    {
+        cout<<"Do you have more processes?Y/N";
+        char i;cin>>i;
+        if (i=='Y' || i=='y')
+        {
+            k=runtime.front();
+            runtime.pop();
+            for (int i=0;i<k;i++)
+            {
+               timer.sec++;
+               Sleep(1000);
+               cout<<"Completing front process in"<<k-timer.sec<<" secs"<<endl;
+
+
+            }
+        }
+        else
+        {
+            break;
+        }
+        timer.sec=0;
+    }
+
+    }
+       return 0;
+}
+
