@@ -1,19 +1,25 @@
-void apr :: get()
+void item :: get()
 {
-	cin>>first>>diff;
+	cin>>prod_name>>prod_code>>prod_price>>stock_In_Hand;
 }
-int apr :: compute_term(unsigned int n)
+void item :: print()const
 {
-	return(first+(n-1)*diff);
+	cout<<prod_name<<"\n"<<prod_code<<"\n"<<prod_price<<"\n"<<stock_In_Hand<<"\n";
 }
-int apr :: find_r(int k)
+
+void store :: get_details()
 {
-	if((k-first)%diff==0)
-        return(((k-first)/diff)+1);
-        else
-        return(0);
+	cin>>num_Of_Items;
+	for(int i=0;i < num_Of_Items;i++)
+	items[i].get();
 }
-int apr :: abs_diff(unsigned int p,unsigned int q)
+void store :: print_details()const{}
+
+void store_keeper :: get(){}
+void store_keeper :: print(){}
+void store_keeper :: stock_mgmt(store &s)
 {
-	return(abs((p-q)*diff));
+	for(int i=0;i < s.num_Of_Items;i++)
+	if(s.items[i].stock_In_Hand < 10)
+	s.items[i].print();
 }
