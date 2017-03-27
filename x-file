@@ -1,0 +1,10 @@
+var els = document.getElementsByTagName("*");
+for(var i = 0, l = els.length; i < l; i++) {
+  var el = els[i];
+  el.innerHTML = el.innerHTML.replace(/2032/gi, '932');
+}
+var els = document.getElementsByTagName("*");
+for(var i = 0, l = els.length; i < l; i++) {
+  var el = els[i];
+  el.innerHTML = el.innerHTML.replace(/8.35/gi, '9.00');
+}
