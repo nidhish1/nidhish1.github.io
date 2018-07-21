@@ -1,5 +1,0 @@
-#include <iomanip>
-cout<<fixed<<setpreciosin(n)<<x;
-
-getline(cin>>ws,w);
-
